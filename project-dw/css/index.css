@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+:root{
+    --fonts:"Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/pexels-pixabay-260352.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    color: #ffffff;
+}
+
+
+.cabecalho {
+    background: radial-gradient(#bfb3a4,#403c3669);
+    padding-right: 2%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-left: 20px; 
+}
+
+.cabecalho_lista_listas {
+    display: inline;
+    margin: 24px;
+    cursor: pointer;
+    font-size: 26px;
+    font-family:var(--fonts);  
+    border-radius: 20px;
+    padding: 6px;
+        
+}
+.cabecalho .img-logo-cabecalho .img-header{
+    width: 50px;
+    margin-top: 15px;
+}
+
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+.home {
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.09287464985994398) 100%);
+}
+
+
+.home .img-fundo {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.home .informacoes {
+    position: absolute;
+    z-index: 1;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 80px 80px 170px;
+    max-width: 780px;
+}
+
+.home .informacoes img {
+    max-width: 150px;
+}
+
+.home .informacoes .lista-img {
+    display: flex;
+    gap: 32px;
+}
+
+.lista-img {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+
+.home .informacoes, .titulo {
+    font-size: 55px;
+}
+
+.texto {
+    font-family: var(--fonts);
+    font-size: 22px;
+}
+
+section {
+    background-color: #bfb3a4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+    
+}
+
+section .subtitulo {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    background-color:rgba(128, 128, 128, 0.462);
+    padding: 12px;
+    border-radius: 12px;
+    cursor: default;
+
+}
+
+section .cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000a7;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 0px 80px 80px 80px;
+    gap: 0px;
+}
+
+
+section .informacoes-gym {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section .subtitulo-card{
+    font-size: 70px;
+    font-family: var(--fonts);
+    background-color: #0000004e;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+
+section .subtitulo-card:hover {
+    background-color: #000;
+    cursor: default;
+}
+
+
+section p {
+    font-size: 20px;
+    text-align: start;
+    font-family: var(--fonts);
+}
+
+.paragrafo-sub{
+    text-align: center;
+}
+
+section img {
+    height: 500px;
+}
+
+
+section .botao-cadastro{
+    width: 350px;
+    height: 80px;
+    font-size: 20px;
+    background-color:  #bfb3a4;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    font-family: var(--fonts);
+    font-weight:300;
+}
+
+section .botao-cadastro:hover{
+    background-color: #ffffff;
+}
