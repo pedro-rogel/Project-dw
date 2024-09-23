@@ -7,22 +7,6 @@ async function cadastro() {
   let data = document.querySelector("#date").value;
   let termos = document.querySelector("#terms").checked;
 
-  let api = await fetch(url, {
-    method: "POST",
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      user_type_id: 1,
-      password: senha,
-      cpf_cnpj: cpf,
-      terms: termos,
-      birthday: data,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
   if (!name) {
     alert("O campo nome está vazio, passe um algun valor válido");
     return;
@@ -48,6 +32,24 @@ async function cadastro() {
     return;
     
   } else {
+
+
+    let api = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        user_type_id: 1,
+        password: senha,
+        cpf_cnpj: cpf,
+        terms: termos,
+        birthday: data,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  
     let resp = await api.json();
 
     if (resp.data.errors) {
