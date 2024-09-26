@@ -89,6 +89,8 @@ a:hover{
     gap: 32px;
     padding: 80px 80px 80px 170px;
     max-width: 780px;
+    font-family: var(--fonts);
+    
 }
 
 .home .informacoes img {
@@ -110,7 +112,7 @@ a:hover{
 
 
 .home .informacoes, .titulo {
-    font-size: 55px;
+    font-size: 35px;
 }
 
 .texto {
@@ -173,14 +175,19 @@ section .subtitulo-card:hover {
 }
 
 
-section p {
+section .paragrafo {
     font-size: 20px;
     text-align: start;
     font-family: var(--fonts);
+    background-color: rgba(172, 206, 236, 0.064);
+    padding: 12px;
+    border-radius: 12px;
+    
 }
 
 .paragrafo-sub{
     text-align: center;
+    font-family: var(--fonts);
 }
 
 section img {
