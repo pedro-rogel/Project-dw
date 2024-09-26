@@ -6,9 +6,34 @@
     <title>Login</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='../script/login.js'></script>
 </head>
 <body>
-    
+    <header class="cabecalho">
+        <ul>
+          <li class="cabecalho_lista_listas">
+            <a href="./cadastro.html">Cadastro</a> 
+          </li>
+          <li class="cabecalho_lista_listas">
+            <a href="./login.html" target="_blank">Login</a>
+          </li>
+          <li class="cabecalho_lista_listas">
+            <a href="./home.html" target="_blank">Home</a>
+          </li>
+          <li class="cabecalho_lista_listas">
+            <a href="../index.html" target="_blank">Inicio</a>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <form class="formulario">
+            <label class="rotulo" for="email"> Email
+                <input class="email" type="email" name="email" id="email" placeholder="email">
+            </label>
+            <label class="rotulo" for="password"> Senha
+                <input class="senha" type="password" name="password" id="password" placeholder="senha">
+            </label>
+        </form>
+      </main>
 </body>
 </html>
