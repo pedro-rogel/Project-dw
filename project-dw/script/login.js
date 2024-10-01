@@ -29,11 +29,24 @@ const login = async () => {
   });
 
   let resp = await api.json();
-  
+  console.log(resp)
+  //localStorage.setItem("user", JSON.stringify(resp))
+
+
   if (resp.data.errors){
     alert(resp.data.errors)
+    alert('Deu erro')
+  } else {
+    alert('Deu certo')
+    window.location.href = "../view/home.html"
   }
 
 };
 
+const cadastroEndereco = () => {
+  //let user = JSON.parse(localStorage.getItem("user"))
+  console.log(user.access_token)
+}
+
 botao.addEventListener("click", login)
+
