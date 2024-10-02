@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+:root{
+    --fonts:"Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/fundo-cadastro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.cabecalho {
+    background: radial-gradient(#bfb3a4,#403c3669);
+    padding-right: 2%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-left: 20px; 
+    
+}
+
+.cabecalho_lista_listas {
+    display: inline;
+    margin: 24px;
+    cursor: pointer;
+    font-size: 26px;
+    font-family:var(--fonts);  
+    border-radius: 20px;
+    padding: 6px;
+        
+}
+.cabecalho .img-logo-cabecalho .img-header{
+    width: 50px;
+    margin-top: 15px;
+}
+
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+main {
+  padding: 25px;
+  background-color: #0000008a;
+  margin: 12px;
+  border-radius: 12px;
+}
+
+.titulo {
+  color: #000000;
+  width: 500px;
+  margin: 12px auto;
+  background-color: #ffffff30;
+  text-align: center;
+  border-radius: 12px;
+  
+}
+
+main .listagem-endereco {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+main .cartao-endereco {
+  background-color: #000000a7;
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.4s ease-in-out;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+main .cartao-endereco:hover {
+  background-color: #a1a552b3;
+  color: #000000;
+}
+
+main .cartao-endereco .informacoes {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #333333;
+  border-radius: 10px;
+}
+
+main .cartao-endereco .informacoes span {
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+main .cartao-endereco .img {
+  width: 90px;
+  height: 90px;
+  border-radius: 15px;
+}
+
+main .cartao-endereco .edicao {
+  display: flex;
+  gap: 15px;
+  padding: 8px;
+}
+
+.excluir-end {
+  background-color: #7e7e7e;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.editar-end {
+  background-color: rgba(172, 206, 236, 0.655);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+main .descricao {
+  max-height: 80px;
+  font-size: 14px;
+  padding-right: 10px;
+  color: #ffffff;
+}
+
+main .cartao-endereco_add {
+  background-color: #000000a7;
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+main .cartao-endereco_add:hover {
+  background-color: #a1a552b3;
+  color: #000000;
+}
+
+main .cartao-endereco_add .informacoes_add {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #333333;
+  border-radius: 10px;
+}
+
+main .cartao-endereco_add .informacoes_add span {
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+main .cartao-endereco_add svg {
+  width: 90px;
+  height: 90px;
+  margin-top: 25px;
+  cursor: pointer;
+  
+}
+
