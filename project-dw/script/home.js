@@ -3,10 +3,9 @@ addEndereco.addEventListener("click", () => {
   window.open("../view/endereco.html", "_blank");
 });
 
-
 const renderizarEnderecos = (end) => {
   const listaEndereco = document.querySelector(".listagem-endereco");
-  
+
   listaEndereco.innerHTML = "";
 
   end.forEach((endereco) => {
@@ -31,12 +30,12 @@ const renderizarEnderecos = (end) => {
       </ul>
       <p class="descricao">${endereco.address} - ${endereco.cep}</p>
     `;
-    listaEndereco.appendChild(li)
+    listaEndereco.appendChild(li);
   });
 
-const liAdd = document.createElement("li");
-liAdd.classList.add("cartao-endereco_add");
-liAdd.innerHTML = ` <div class="informacoes_add">
+  const liAdd = document.createElement("li");
+  liAdd.classList.add("cartao-endereco_add");
+  liAdd.innerHTML = ` <div class="informacoes_add">
       <span>Adicionar Endereço</span>
     </div>
 
@@ -56,8 +55,7 @@ liAdd.innerHTML = ` <div class="informacoes_add">
       />
     </svg>`;
 
-    
-    listaEndereco.appendChild(liAdd)
+  listaEndereco.appendChild(liAdd);
 };
 
 const urlGet = "https://go-wash-api.onrender.com/api/auth/address";
