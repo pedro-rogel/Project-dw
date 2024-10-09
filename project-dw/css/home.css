@@ -189,3 +189,16 @@ main .cartao-endereco_add svg {
   
 }
 
+.enderecos-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.endereco {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
