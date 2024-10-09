@@ -31,7 +31,7 @@ const login = async () => {
     console.log(resp);
     localStorage.setItem("user", JSON.stringify(resp));
     alert('Login bem sucedido');
-    window.location.href = "../view/home.html";
+    window.open('../view/home.html', '_blank');
   } else {
     let respErro = await api.json();
     alert(respErro.data.errors);
