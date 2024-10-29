@@ -24,7 +24,7 @@ const renderizarEnderecos = (end) => {
           </a>
         </li>
         <li class="editar-end" id="${endereco.id}">
-        <a href="../view/update-address.html?id=${endereco.id}l
+        <a href="../view/update-address.html?id=${endereco.id}
         ">
           Editar 
           <img src="../img/pencil.svg" alt="login Edição" /></a>
@@ -86,5 +86,3 @@ const getEndereco = async () => {
 };
 
 document.addEventListener("DOMContentLoaded", getEndereco);
-
-

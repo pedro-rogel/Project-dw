@@ -3,10 +3,6 @@ const urlBase = "https://go-wash-api.onrender.com/api/auth/address/";
 const params = new URLSearchParams(window.location.search);
 const addressId = params.get("id");
 
-if (!addressId) {
-  alert("Endereço não encontrado");
-}
-
 const url = `${urlBase}${addressId}`;
 const user = JSON.parse(localStorage.getItem("user"));
 
@@ -17,9 +13,9 @@ const atualizarEndereco = async () => {
   const number = document.querySelector("#number").value;
   const complement = document.querySelector("#complement").value;
 
-  if(!title && !cep && !address && !number){
-    alert("Passe valores para os campos solicitados.")
-    return
+  if (!title && !cep && !address && !number) {
+    alert("Passe valores para os campos solicitados.");
+    return;
   }
   if (!title) {
     alert("Passe um valor para o campo Título!");
@@ -42,9 +38,9 @@ const atualizarEndereco = async () => {
     method: "POST",
     body: JSON.stringify({
       title: title,
-      cep : cep,
-      address : address,
-      number : number,
+      cep: cep,
+      address: address,
+      number: number,
       complement: complement,
     }),
     headers: {
