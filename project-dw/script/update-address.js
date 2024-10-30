@@ -1,10 +1,30 @@
 const urlBase = "https://go-wash-api.onrender.com/api/auth/address/";
-
 const params = new URLSearchParams(window.location.search);
 const addressId = params.get("id");
-
 const url = `${urlBase}${addressId}`;
 const user = JSON.parse(localStorage.getItem("user"));
+
+const aparecerEndereco = async () => {
+  const getEndereco = await fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${user.access_token}`,
+    },
+  });
+  if (getEndereco.ok) {
+    const resposta = await getEndereco.json();
+    document.querySelector("#title").value = resposta.data.title;
+    document.querySelector("#CEP").value = resposta.data.cep;
+    document.querySelector("#address").value = resposta.data.address;
+    document.querySelector("#number").value = resposta.data.number;
+    document.querySelector("#complement").value = resposta.data.complement;
+  } else {
+    alert("Erro ao carregar dados do endereço.");
+  }
+};
+window.addEventListener("load", aparecerEndereco);
+
 
 const atualizarEndereco = async () => {
   const title = document.querySelector("#title").value;
@@ -54,9 +74,7 @@ const atualizarEndereco = async () => {
     window.location.href = "../view/home.html";
   } else {
     alert("Erro ao atualizar endereço.");
-  }
+  };
 };
 const atualizar = document.querySelector("#botao-input");
 atualizar.addEventListener("click", atualizarEndereco);
-
-console.log(params.get("id"));
