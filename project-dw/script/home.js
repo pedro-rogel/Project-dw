@@ -61,9 +61,9 @@ const renderizarEnderecos = (end) => {
 
   document.querySelectorAll(".excluir-end").forEach((botao) => {
     botao.addEventListener("click", async () => {
-      const addressId = botao.getAttribute("data-id");
+      let addressId = botao.getAttribute("data-id");
 
-      output.classList.toggle("ativo")
+      output.classList.toggle("ativo");
 
       output.innerHTML = `<div class="card">
       <p>Deseja mesmo excluir esse endereço?</p>
