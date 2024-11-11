@@ -93,6 +93,7 @@ const getEndereco = async () => {
   let user = JSON.parse(localStorage.getItem("user"));
   if (!user || !user.access_token) {
     alert("Usuário não está autenticado. Faça o login novamente.");
+    window.location.href = '../view/login.html'
     return;
   }
 
@@ -116,8 +117,13 @@ const getEndereco = async () => {
 
 
 const deleteAddress = async (addressId) => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  const response = await fetch(`${urlBase}${addressId}`, {
+  let user = JSON.parse(localStorage.getItem("user"));
+  if (!user || !user.access_token){
+    alert("Usuário não está autenticado. Faça o login novamente")
+    window.location.href = '../view/login.html'
+    return;
+  }
+  let response = await fetch(`${urlBase}${addressId}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

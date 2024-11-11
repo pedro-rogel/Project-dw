@@ -1,113 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Atualizar Endereço</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="website icon"
-      type=""
-      href="../img/img-aguia-removebg-preview.png"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="../css/update-address.css"
-    />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@0,500;0,800;1,200&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="cabecalho">
-      <ul>
-        <li class="cabecalho_lista_listas">
-          <a href="./cadastro.html">Cadastro</a>
-        </li>
-        <li class="cabecalho_lista_listas">
-          <a href="./login.html" target="_blank">Login</a>
-        </li>
-        <li class="cabecalho_lista_listas">
-          <a href="./home.html" target="_blank">Home</a>
-        </li>
-        <li class="cabecalho_lista_listas">
-          <a href="../index.html" target="_blank">Inicio</a>
-        </li>
-      </ul>
-    </header>
-    <main>
-      <div class="main__form">
-        <form class="formulario" action="" method="">
-          <div class="imagem">
-            <img class="imagem-img" src="../img/aguia-logo.png" alt="Aguia" />
-            <h3>ATUALIZAR ENDEREÇO</h3>
-          </div>
-          <div class="inputs">
-            <label class="rotulo" for="Name">
-              Title
-              <input
-                class="entrada"
-                type="text"
-                name="title"
-                id="title"
-                placeholder="Minha Casa"
-              />
-            </label>
-            <label class="rotulo" for="email"
-              >CEP
-              <input
-                class="entrada"
-                type="email"
-                name="CEP"
-                id="CEP"
-                placeholder="Digite seu CEP"
-              />
-            </label>
-            <label class="rotulo" for="password">Address</label>
-            <input
-              class="entrada"
-              type="text"
-              name="address"
-              id="address"
-              placeholder="Digite seu endereço"
-            />
-            <label class="rotulo"
-              >Number
-              <input
-                class="entrada"
-                type="text"
-                name="number"
-                placeholder="Numero de sua Casa"
-                id="number"
-              />
-            </label>
-            <label class="rotulo"
-              >Complement
-              <input
-                class="entrada"
-                type="text"
-                name="complement"
-                id="complement"
-                placeholder="Casa ou Apartameto"
-              />
-            </label>
-            <input
-              class="botao"
-              type="button"
-              value="Atualizar"
-              id="botao-input"
-            />
-          </div>
-        </form>
-      </div>
-    </main>
-    <script src="../script/update-address.js" defer></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Atualizar Endereço</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="website icon" type="" href="../img/img-aguia-removebg-preview.png" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/update-address.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@0,500;0,800;1,200&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="cabecalho">
+    <ul>
+      <li class="cabecalho_lista_listas">
+        <a href="./cadastro.html">Cadastro</a>
+      </li>
+      <li class="cabecalho_lista_listas">
+        <a href="./login.html" target="_blank">Login</a>
+      </li>
+      <li class="cabecalho_lista_listas">
+        <a href="./home.html" target="_blank">Home</a>
+      </li>
+      <li class="cabecalho_lista_listas">
+        <a href="../index.html" target="_blank">Inicio</a>
+      </li>
+      <li class="cabecalho_lista_listas">
+        <a target="_blank" onclick="logout()">Sair</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <div class="main__form">
+      <form class="formulario" action="" method="">
+        <div class="imagem">
+          <img class="imagem-img" src="../img/aguia-logo.png" alt="Aguia" />
+          <h3>ATUALIZAR ENDEREÇO</h3>
+        </div>
+        <div class="inputs">
+          <label class="rotulo" for="Name">
+            Title
+            <input class="entrada" type="text" name="title" id="title" placeholder="Minha Casa" />
+          </label>
+          <label class="rotulo" for="email">CEP
+            <input class="entrada" type="email" name="CEP" id="CEP" placeholder="Digite seu CEP" />
+          </label>
+          <label class="rotulo" for="password">Address</label>
+          <input class="entrada" type="text" name="address" id="address" placeholder="Digite seu endereço" />
+          <label class="rotulo">Number
+            <input class="entrada" type="text" name="number" placeholder="Numero de sua Casa" id="number" />
+          </label>
+          <label class="rotulo">Complement
+            <input class="entrada" type="text" name="complement" id="complement" placeholder="Casa ou Apartameto" />
+          </label>
+          <input class="botao" type="button" value="Atualizar" id="botao-input" />
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="../script/update-address.js" defer></script>
+  <script src="../script/logout.js" defer></script>
+</body>
+
 </html>
