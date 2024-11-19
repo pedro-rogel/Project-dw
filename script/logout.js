@@ -3,7 +3,6 @@ const user = JSON.parse(localStorage.getItem("user"));
 const logout = async () => {
     if (!user) {
         alert("Usuário não está autenticado.");
-        window.location.href = '/project-dw/index.html';
         return;
       };
     let apiLogout = await fetch(urlapi,{
