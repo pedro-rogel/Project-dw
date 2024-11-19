@@ -1,7 +1,7 @@
 const urlapi = 'https://go-wash-api.onrender.com/api/auth/logout'
 const user = JSON.parse(localStorage.getItem("user"));
 const logout = async () => {
-    if (!user || !user.access_token) {
+    if (!user) {
         alert("Usuário não está autenticado.");
         window.location.href = '/project-dw/index.html';
         return;
